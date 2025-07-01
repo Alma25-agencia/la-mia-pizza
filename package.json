@@ -1,0 +1,13 @@
+{
+  "name": "la-mia-pizza",
+  "version": "1.0.0",
+  "description": "Sistema de pedidos online para La Mia Pizza",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve .",
+    "build": "echo 'Static site - no build needed'"
+  },
+  "keywords": ["pizza", "delivery", "online-orders"],
+  "author": "Tu Nombre",
+  "license": "MIT"
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="La Mia Pizza - Pedidos online de pizzas artesanales. Delivery en Bigues i Riells, Sant Feliu, Santa Eulàlia y Centelles">
+    <meta name="keywords" content="pizza, delivery, Bigues i Riells, Sant Feliu, Santa Eulàlia, Centelles, pedidos online">
+    <title>La Mia Pizza - Pedidos Online</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍕</text></svg>">
+</head>
+<body>
+    <header class="header">
+        <h1>🍕 La Mia Pizza</h1>
+        <p>Pizzas Artesanales • Delivery y Recogida</p>
+        
+        <div class="location-selector">
+            <select class="location-select" id="locationSelect">
+                <option value="">Selecciona tu local</option>
+                <option value="bigues">Bigues i Riells - C/ Anna Mogas 116</option>
+                <option value="santfeliu">Sant Feliu de Codines</option>
+                <option value="santaeulalia">Santa Eulàlia de Ronçana</option>
+                <option value="centelles">Centelles</option>
+            </select>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="menu-section">
+            <div class="section-header">Pizzas</div>
+            <div class="menu-items" id="pizzas"></div>
+            <div class="pizza-options">
+                <p><strong>Disponemos de 2 tipos de massa:</strong></p>
+                <p>- Clàssica</p>
+                <p>- Eco</p>
+                <br>
+                <p><em>*Formatge vegà (supl. 1.50€)</em></p>
+                <p><em>*Doble massa (supl. 1.00€)</em></p>
+                <p><em>*Pizzes a meitat (supl. 1.00€)</em></p>
+            </div>
+        </section>
+
+        <section class="menu-section">
+            <div class="section-header">Amanides</div>
+            <div class="menu-items" id="amanides"></div>
+        </section>
+
+        <section class="menu-section">
+            <div class="section-header">Crestes</div>
+            <div class="menu-items" id="crestes"></div>
+        </section>
+
+        <section class="menu-section">
+            <div class="section-header">Tapes</div>
+            <div class="menu-items" id="tapes"></div>
+        </section>
+
+        <section class="menu-section">
+            <div class="section-header">Postres</div>
+            <div class="menu-items" id="postres"></div>
+        </section>
+
+        <section class="menu-section">
+            <div class="section-header">Bebidas</div>
+            <div class="menu-items" id="bebidas"></div>
+        </section>
+
+        <div class="info-section">
+            <h3>Información de Contacto</h3>
+            <div class="contact-info">📍 C/ Anna Mogas, 116 - Bigues i Riells</div>
+            <div class="contact-info">📞 93 607 20 70</div>
+            <div class="contact-info">🚚 Servicio de Delivery disponible</div>
+        </div>
+    </div>
+
+    <div class="cart-float" id="cartFloat" onclick="openCart()">
+        🛒 Ver Carrito
+        <span class="cart-count" id="cartCount">0</span>
+    </div>
+
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h2>Tu Pedido</h2>
+                <button class="close-cart" onclick="closeCart()">×</button>
+            </div>
+            <div id="cartItems"></div>
+            <div class="cart-total" id="cartTotal">Total: 0.00€</div>
+            <button class="checkout-btn" onclick="sendOrder()">Enviar Pedido por WhatsApp</button>
+        </div>
+    </div>
+
+    <script src="js/menu-data.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
